@@ -41,7 +41,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
             this.m_Player2Name = this.textBoxPlayer2Name.Text;
             this.m_Rows = (int) numericUpDownRows.Value;
             this.m_Cols = (int) numericUpDownRows.Value;
-            GraphicsBoard gameBoard = new GraphicsBoard(m_Rows, m_Cols, )
+            GraphicsBoard gameBoard = new GraphicsBoard(m_Rows, m_Cols, m_IsAgainstComputer, m_Player1Name, m_Player2Name);
             this.Close();
 
         }
@@ -52,11 +52,13 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
             if (!enabled)
             {
                 this.textBoxPlayer2Name.Enabled = true;
+                m_IsAgainstComputer = true;
             }
             else
             {
                 this.textBoxPlayer2Name.Enabled = false;
                 this.textBoxPlayer2Name.Text = "[Computer]";
+                m_IsAgainstComputer = false;
             }
         }
 

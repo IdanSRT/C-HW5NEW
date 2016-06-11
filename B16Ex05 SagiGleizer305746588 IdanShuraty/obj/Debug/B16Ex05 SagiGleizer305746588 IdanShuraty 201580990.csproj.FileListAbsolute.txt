@@ -1,1 +1,2 @@
 C:\Users\Sagi\Desktop\HW\B16 Ex05 SagiGleizer 305746588 IdanShuraty 201580990\B16Ex05 SagiGleizer305746588 IdanShuraty\bin\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.exe.config
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex05 SagiGleizer305746588 IdanShuraty\bin\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.exe.config
