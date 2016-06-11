@@ -33,7 +33,7 @@
             this.labelBoardSize = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBoxPlayer1Name = new System.Windows.Forms.TextBox();
-            this.textBoxPlaye2Name = new System.Windows.Forms.TextBox();
+            this.textBoxPlayer2Name = new System.Windows.Forms.TextBox();
             this.numericUpDownRows = new System.Windows.Forms.NumericUpDown();
             this.labelRows = new System.Windows.Forms.Label();
             this.labelCols = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.labelBoardSize.Location = new System.Drawing.Point(12, 114);
             this.labelBoardSize.Name = "labelBoardSize";
             this.labelBoardSize.Size = new System.Drawing.Size(61, 13);
-            this.labelBoardSize.TabIndex = 2;
+            this.labelBoardSize.TabIndex = 5;
             this.labelBoardSize.Text = "Board Size:";
             // 
             // checkBox1
@@ -79,22 +79,23 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Player2:";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // textBoxPlayer1Name
             // 
             this.textBoxPlayer1Name.Location = new System.Drawing.Point(113, 42);
             this.textBoxPlayer1Name.Name = "textBoxPlayer1Name";
             this.textBoxPlayer1Name.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPlayer1Name.TabIndex = 4;
+            this.textBoxPlayer1Name.TabIndex = 2;
             // 
-            // textBoxPlaye2Name
+            // textBoxPlayer2Name
             // 
-            this.textBoxPlaye2Name.Enabled = false;
-            this.textBoxPlaye2Name.Location = new System.Drawing.Point(113, 69);
-            this.textBoxPlaye2Name.Name = "textBoxPlaye2Name";
-            this.textBoxPlaye2Name.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPlaye2Name.TabIndex = 5;
-            this.textBoxPlaye2Name.Text = "[Computer]";
+            this.textBoxPlayer2Name.Enabled = false;
+            this.textBoxPlayer2Name.Location = new System.Drawing.Point(113, 69);
+            this.textBoxPlayer2Name.Name = "textBoxPlayer2Name";
+            this.textBoxPlayer2Name.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPlayer2Name.TabIndex = 4;
+            this.textBoxPlayer2Name.Text = "[Computer]";
             // 
             // numericUpDownRows
             // 
@@ -111,7 +112,7 @@
             0});
             this.numericUpDownRows.Name = "numericUpDownRows";
             this.numericUpDownRows.Size = new System.Drawing.Size(37, 20);
-            this.numericUpDownRows.TabIndex = 6;
+            this.numericUpDownRows.TabIndex = 7;
             this.numericUpDownRows.Value = new decimal(new int[] {
             4,
             0,
@@ -124,9 +125,8 @@
             this.labelRows.Location = new System.Drawing.Point(33, 140);
             this.labelRows.Name = "labelRows";
             this.labelRows.Size = new System.Drawing.Size(37, 13);
-            this.labelRows.TabIndex = 7;
+            this.labelRows.TabIndex = 6;
             this.labelRows.Text = "Rows:";
-            this.labelRows.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelCols
             // 
@@ -134,7 +134,7 @@
             this.labelCols.Location = new System.Drawing.Point(133, 140);
             this.labelCols.Name = "labelCols";
             this.labelCols.Size = new System.Drawing.Size(30, 13);
-            this.labelCols.TabIndex = 9;
+            this.labelCols.TabIndex = 8;
             this.labelCols.Text = "Cols:";
             // 
             // numericUpDownCols
@@ -152,7 +152,7 @@
             0});
             this.numericUpDownCols.Name = "numericUpDownCols";
             this.numericUpDownCols.Size = new System.Drawing.Size(37, 20);
-            this.numericUpDownCols.TabIndex = 8;
+            this.numericUpDownCols.TabIndex = 9;
             this.numericUpDownCols.Value = new decimal(new int[] {
             4,
             0,
@@ -167,6 +167,7 @@
             this.buttonStart.TabIndex = 10;
             this.buttonStart.Text = "Start!";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // GameSetting
             // 
@@ -179,16 +180,18 @@
             this.Controls.Add(this.numericUpDownCols);
             this.Controls.Add(this.labelRows);
             this.Controls.Add(this.numericUpDownRows);
-            this.Controls.Add(this.textBoxPlaye2Name);
+            this.Controls.Add(this.textBoxPlayer2Name);
             this.Controls.Add(this.textBoxPlayer1Name);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.labelBoardSize);
             this.Controls.Add(this.labelPlayer1);
             this.Controls.Add(this.labelPlayer);
             this.Enabled = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GameSetting";
             this.Text = "Game Setting";
-            this.Load += new System.EventHandler(this.GameSetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCols)).EndInit();
             this.ResumeLayout(false);
@@ -203,7 +206,7 @@
         private System.Windows.Forms.Label labelBoardSize;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBoxPlayer1Name;
-        private System.Windows.Forms.TextBox textBoxPlaye2Name;
+        private System.Windows.Forms.TextBox textBoxPlayer2Name;
         private System.Windows.Forms.NumericUpDown numericUpDownRows;
         private System.Windows.Forms.Label labelRows;
         private System.Windows.Forms.Label labelCols;

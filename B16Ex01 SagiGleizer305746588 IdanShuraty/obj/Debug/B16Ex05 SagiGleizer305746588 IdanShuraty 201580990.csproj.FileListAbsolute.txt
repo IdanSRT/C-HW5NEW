@@ -1,0 +1,8 @@
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\bin\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.exe.config
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\bin\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.exe
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\bin\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.pdb
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\obj\Debug\B16Ex01_SagiGleizer305746588_IdanShuraty.GameSetting.resources
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\obj\Debug\B16Ex01_SagiGleizer305746588_IdanShuraty.Properties.Resources.resources
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\obj\Debug\B16Ex05 SagiGleizer305746588 IdanShuraty 201580990.csproj.GenerateResource.Cache
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\obj\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.exe
+C:\Users\sagi\Desktop\C#-HW5New\B16Ex01 SagiGleizer305746588 IdanShuraty\obj\Debug\B16Ex01 SagiGleizer305746588 IdanShuraty.pdb

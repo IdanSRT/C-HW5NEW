@@ -16,7 +16,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GameSetting());
         }
     }
 }
