@@ -31,15 +31,16 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         public GameSetting()
         {
             InitializeComponent();
+
         }
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
             this.m_Player1Name = this.textBoxPlayer1Name.Text;
             this.m_Player2Name = this.textBoxPlayer2Name.Text;
-
             this.m_Rows = (int) numericUpDownRows.Value;
             this.m_Cols = (int) numericUpDownRows.Value;
+            this.Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
             else
             {
                 this.textBoxPlayer2Name.Enabled = false;
+                this.textBoxPlayer2Name.Text = "[Computer]";
             }
         }
 
