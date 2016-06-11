@@ -21,5 +21,10 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         {
 
         }
+
+        private void GameSetting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

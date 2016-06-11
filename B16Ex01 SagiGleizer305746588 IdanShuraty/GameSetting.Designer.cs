@@ -66,9 +66,9 @@
             this.labelBoardSize.AutoSize = true;
             this.labelBoardSize.Location = new System.Drawing.Point(12, 114);
             this.labelBoardSize.Name = "labelBoardSize";
-            this.labelBoardSize.Size = new System.Drawing.Size(58, 13);
+            this.labelBoardSize.Size = new System.Drawing.Size(61, 13);
             this.labelBoardSize.TabIndex = 2;
-            this.labelBoardSize.Text = "Board Size";
+            this.labelBoardSize.Text = "Board Size:";
             // 
             // checkBox1
             // 
@@ -170,6 +170,7 @@
             // 
             // GameSetting
             // 
+            this.AcceptButton = this.buttonStart;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(229, 215);
@@ -186,7 +187,8 @@
             this.Controls.Add(this.labelPlayer);
             this.Enabled = false;
             this.Name = "GameSetting";
-            this.Text = "GameSetting";
+            this.Text = "Game Setting";
+            this.Load += new System.EventHandler(this.GameSetting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRows)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCols)).EndInit();
             this.ResumeLayout(false);
