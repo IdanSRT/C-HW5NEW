@@ -16,5 +16,10 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
