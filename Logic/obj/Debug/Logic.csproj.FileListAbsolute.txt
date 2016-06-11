@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 C:\Users\sagi\Desktop\C#-HW5New\Logic\bin\Debug\Logic.exe.config
+=======
+C:\Users\Sagi\Desktop\HW\B16 Ex05 SagiGleizer 305746588 IdanShuraty 201580990\Logic\bin\Debug\Logic.exe.config
+>>>>>>> 335e2d19792febc53014fec47902529ddca47819

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace B16Ex01_SagiGleizer305746588_IdanShuraty
+namespace UI
 {
     public partial class GameSetting : Form
     {

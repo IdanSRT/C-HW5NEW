@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameMenager.cs" />
     <Compile Include="GameSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +59,7 @@
     <Compile Include="GraphicsBoard.Designer.cs">
       <DependentUpon>GraphicsBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GameSetting.resx">
       <DependentUpon>GameSetting.cs</DependentUpon>
@@ -88,10 +90,6 @@
     <ProjectReference Include="..\Logic\Logic.csproj">
       <Project>{37f56721-7038-4c98-ae80-21d9d8d456ce}</Project>
       <Name>Logic</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UI\UI.csproj">
-      <Project>{35e79b58-0ab9-4329-9ef5-9ebc5ba081d1}</Project>
-      <Name>UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
