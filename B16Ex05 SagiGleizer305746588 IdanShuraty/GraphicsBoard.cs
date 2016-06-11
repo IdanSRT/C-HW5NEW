@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 
 namespace B16Ex01_SagiGleizer305746588_IdanShuraty
@@ -23,22 +25,28 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         private Label m_CurrentScore;
         private int m_playerOneScore;
         private int m_playerTwoScore;
+        private string m_playerOneName;
+        private string m_playerTwoName;
 
-
-
-        public GraphicsBoard(int i_boardRows, int i_boardColumns, bool i_againtsComputer)
+        // Constructor for Graphic board
+        public GraphicsBoard(int i_boardRows, int i_boardColumns, bool i_againtsComputer, string i_PlayerOneName, string i_PlayerTwoName)
         {
             m_BoardRows = i_boardRows;
             m_BoardColumns = i_boardColumns;
             m_AgaintsComputer = i_againtsComputer;
             m_GameButtons = new Button[m_BoardRows];
             m_GameMatrix = new Button[m_BoardRows, m_BoardColumns];
-            m_GameControls = new Control[m_BoardColumns];
+            m_GameControls = new Control[m_BoardColumns];          
             m_playerOneScore = m_playerTwoScore = 0;
             m_CurrentScore = new Label();
-            Board newGameBoard = new Game()
-            m_GameManager = new GameMenager()
-            
+            m_playerOneName = i_PlayerOneName;
+            m_playerTwoName = i_PlayerTwoName;
+            Board newGameBoard = new Board(m_BoardRows, m_BoardColumns);
+
+            if (m_AgaintsComputer)
+            {
+                m_GameManager = new GameMenager(newGameBoard, m_playerOneName);
+            }
             for (int i = 0; i < m_BoardColumns; i++)
             {
                 m_GameButtons[i] = new Button();
