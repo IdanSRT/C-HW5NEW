@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace B16Ex01_SagiGleizer305746588_IdanShuraty
 {
     public partial class GraphicsBoard : Form
@@ -18,6 +19,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         private Button[] m_GameButtons;
         private Button[,] m_GameMatrix;
         private Control[] m_GameControls;
+        private GameMenager m_GameManager;
         private Label m_CurrentScore;
         private int m_playerOneScore;
         private int m_playerTwoScore;
@@ -34,6 +36,8 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
             m_GameControls = new Control[m_BoardColumns];
             m_playerOneScore = m_playerTwoScore = 0;
             m_CurrentScore = new Label();
+            Board newGameBoard = new Game()
+            m_GameManager = new GameMenager()
             
             for (int i = 0; i < m_BoardColumns; i++)
             {
