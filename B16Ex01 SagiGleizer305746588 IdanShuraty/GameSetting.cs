@@ -16,6 +16,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         private string m_Player2Name;
         private int m_Rows;
         private int m_Cols;
+        bool m_IsAgainstComputer;
 
         public int Cols
         {
@@ -40,7 +41,9 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
             this.m_Player2Name = this.textBoxPlayer2Name.Text;
             this.m_Rows = (int) numericUpDownRows.Value;
             this.m_Cols = (int) numericUpDownRows.Value;
+            GraphicsBoard gameBoard = new GraphicsBoard(m_Rows, m_Cols, )
             this.Close();
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
