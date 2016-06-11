@@ -1,4 +1,4 @@
-﻿namespace B16Ex01_SagiGleizer305746588_IdanShuraty
+﻿namespace UI
 {
     partial class GameSetting
     {
