@@ -12,7 +12,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
 {
     public partial class GraphicsBoard : Form
     {
-        private int m_BoardLines;
+        private int m_BoardRows;
         private int m_BoardColumns;
         private bool m_AgaintsComputer;
         private Button[] m_GameButtons;
@@ -24,17 +24,17 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
 
 
 
-        public GraphicsBoard(int i_boardLines, int i_boardColumns, bool i_againtsComputer)
+        public GraphicsBoard(int i_boardRows, int i_boardColumns, bool i_againtsComputer)
         {
-            m_BoardLines = i_boardLines;
+            m_BoardRows = i_boardRows;
             m_BoardColumns = i_boardColumns;
             m_AgaintsComputer = i_againtsComputer;
-            m_GameButtons = new Button[m_BoardLines];
-            m_GameMatrix = new Button[m_BoardLines, m_BoardColumns];
+            m_GameButtons = new Button[m_BoardRows];
+            m_GameMatrix = new Button[m_BoardRows, m_BoardColumns];
             m_GameControls = new Control[m_BoardColumns];
             m_playerOneScore = m_playerTwoScore = 0;
             m_CurrentScore = new Label();
-            //nothing
+            
             for (int i = 0; i < m_BoardColumns; i++)
             {
                 m_GameButtons[i] = new Button();
@@ -44,7 +44,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
                 m_GameButtons[i].AutoSize = true;
             }
 
-            for (int i = 0; i < m_BoardLines; i++)
+            for (int i = 0; i < m_BoardRows; i++)
             {
                 for (int j = 0; j < m_BoardColumns; j++)
                 {
@@ -77,7 +77,7 @@ namespace B16Ex01_SagiGleizer305746588_IdanShuraty
         private void InitializeComponent()
         {
             this.SuspendLayout();
-            this.ClientSize = new System.Drawing.Size(m_BoardLines * 50, m_BoardColumns * 50);
+            this.ClientSize = new System.Drawing.Size(m_BoardRows * 50, m_BoardColumns * 50);
             this.Name = "GraphicsBoard";
 
             // @TODO: Check how to fix resize window with all forms
