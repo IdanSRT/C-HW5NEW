@@ -12,10 +12,10 @@ namespace UI
         public static void Main()
         {
             Console.WriteLine("Hello!\nLet's play 4 in a row!");
-            int numOfPlayers = GameMenager.ChooseNumOf("Players", 1, 2);
-            int numOfRows = GameMenager.ChooseNumOf("Rows", 4, 8);
-            int numOfColumns = GameMenager.ChooseNumOf("Columns", 4, 8);
-            GameMenager NewGame = GameMenager.StartNewGame(numOfRows, numOfColumns, numOfPlayers);
+            int numOfPlayers = GameManager.ChooseNumOf("Players", 1, 2);
+            int numOfRows = GameManager.ChooseNumOf("Rows", 4, 8);
+            int numOfColumns = GameManager.ChooseNumOf("Columns", 4, 8);
+            GameManager NewGame = GameManager.StartNewGame(numOfRows, numOfColumns, numOfPlayers);
             NewGame.PlayGame();
             Console.ReadLine();
         }

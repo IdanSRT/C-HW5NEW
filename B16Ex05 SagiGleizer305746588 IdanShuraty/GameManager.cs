@@ -14,17 +14,30 @@ namespace UI
         Win,
         Draw
     }
-    public class GameMenager
+    public class GameManager
     {
+        public event EventHandler ModelBoardChanged;
+        public event EventHandler GameOver;
+
         private Board m_GameBoard;
         private int m_RowRange;
         private int m_ColumnRange;
         private Player m_FirstPlayer;
-        private Player m_SecondPlayer;
+        private Player m_SecondPlayer; 
         private bool m_IsEnded;
 
+        public GameManager(int i_Rows, int i_Columns, bool i_IsComputer)
+        {
+            m_GameBoard = new Board(i_Rows,i_Columns);
+            m_FirstPlayer = new Player("PlayerOne", false, (eSign)0);
+            m_SecondPlayer = new Player("PlayerTwo", i_IsComputer, (eSign)1);
+            m_RowRange = m_GameBoard.Rows;
+            m_ColumnRange = m_GameBoard.Columns;
+            m_IsEnded = false;
+        }
+
         // Constractor for two players
-        public GameMenager(Board i_GameBoard, string i_FirstPlayerName, string i_SecondPlayerName)
+        public GameManager(Board i_GameBoard, string i_FirstPlayerName, string i_SecondPlayerName)
         {
             m_GameBoard = i_GameBoard;
             m_FirstPlayer = new Player(i_FirstPlayerName, false, (eSign) 0);
@@ -35,7 +48,7 @@ namespace UI
         }
 
         // Constractor for one player
-        public GameMenager(Board i_GameBoard, string i_FirstPlayerName)
+        public GameManager(Board i_GameBoard, string i_FirstPlayerName)
             : this(i_GameBoard, i_FirstPlayerName, "Computer")
         {
         }
@@ -48,18 +61,18 @@ namespace UI
         }
 
         // Start a new game
-        public static GameMenager StartNewGame(int i_Rows, int i_Columns, int i_NumOfPlayers) 
+        public static GameManager StartNewGame(int i_Rows, int i_Columns, int i_NumOfPlayers) 
         {
             Board GameBoard = new Board(i_Rows, i_Columns);
-            GameMenager GameManager; 
+            GameManager GameManager; 
             if (i_NumOfPlayers == 1)
             {
-                GameManager = new GameMenager(GameBoard, "Player 1");
+                GameManager = new GameManager(GameBoard, "Player 1");
                 GameManager.m_SecondPlayer.IsPC = true;
             }
             else
             {
-                GameManager = new GameMenager(GameBoard, "Player 1", "Player 2");
+                GameManager = new GameManager(GameBoard, "Player 1", "Player 2");
             }
 
             return GameManager;
@@ -69,24 +82,13 @@ namespace UI
         {
             this.m_GameBoard = new Board(this.m_GameBoard.Rows, this.m_GameBoard.Columns);
             this.IsEnded = false;
-            Ex02.ConsoleUtils.Screen.Clear();
             PlayGame();
         }
 
-        // Helper to read from the user the number of Players/Rows/Columns
+        // Helper User need to click on the needed column number
         public static int ChooseNumOf(string numToChoose, int startRange, int endRange)
-        {
-            System.Console.WriteLine("Please choose the number of " + numToChoose + ", between the range " + startRange + " to " + endRange + " (and then press 'enter'):");
-            string inputNumStr = Console.ReadLine();
-            int inputNumInt;
-            bool goodInput = int.TryParse(inputNumStr, out inputNumInt);
-            while (!goodInput || inputNumInt < startRange || inputNumInt > endRange)
-            {
-                Console.WriteLine("Input is not valid. \nPlease choose a number between the range " + startRange + " to " + endRange + ":");
-                inputNumStr = Console.ReadLine();
-                goodInput = int.TryParse(inputNumStr, out inputNumInt);
-            }
-
+        {           
+           
             return inputNumInt;
         }
 
@@ -115,9 +117,7 @@ namespace UI
         // Adding the coin of the current player to the chosen column
         public Coin AddCoinToBoard(int i_ColumnChoosen, Player i_CurrentPlayer)
         {
-            Coin lastCoinInserted = m_GameBoard.InsertCoin(i_ColumnChoosen - 1, i_CurrentPlayer);
-            Ex02.ConsoleUtils.Screen.Clear();
-            m_GameBoard.PrintBoard();
+            Coin lastCoinInserted = m_GameBoard.InsertCoin(i_ColumnChoosen - 1, i_CurrentPlayer);           
             return lastCoinInserted;
         }
 

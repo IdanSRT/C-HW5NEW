@@ -1,4 +1,4 @@
-﻿namespace UI
+﻿namespace B15_Ex05
 {
     partial class GraphicsBoard
     {
